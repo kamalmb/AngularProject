@@ -1,0 +1,13 @@
+
+<div *ngIf="user">
+  <div class="user-details">
+    <h2>Détails de l'utilisateur</h2>
+    <img [src]="user.picture.large" alt="User Picture">
+    <p><strong>Full name :</strong> {{ user.name.first }} {{ user.name.last }}</p>
+    <p><strong>Email :</strong> {{ user.email }}</p>
+    <p><strong>City :</strong> {{ user.location.city }}</p>
+    <p><strong>Country :</strong> {{ user.location.country }}</p>
+    <p><strong>Phone :</strong> {{ user.phone }}</p>
+    <button class="details-button" (click)="BackToUser()">Back</button>
+  </div>
+</div>
