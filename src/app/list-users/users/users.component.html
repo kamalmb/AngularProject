@@ -3,6 +3,7 @@
   <table class="user-table">
     <thead>
       <tr>
+        <th>Picture</th>
         <th>Gender</th>
         <th>First Name</th>
         <th>Last Name</th>
@@ -14,6 +15,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of userResults | paginate: { itemsPerPage: pageSize, currentPage: page }">
+        <td><img [src]="user.picture.medium" alt="User Picture"></td>
         <td>{{ user.gender }}</td>
         <td>{{ user.name.first }}</td>
         <td>{{ user.name.last }}</td>
